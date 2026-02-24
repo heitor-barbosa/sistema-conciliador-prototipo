@@ -1,0 +1,13 @@
+[ui]
+hideTopBar = true
+
+[client]
+toolbarMode = "minimal"
+showSidebarNavigation = false
+
+[server]
+fileWatcherType = "none"
+headless = true
+
+[browser]
+gatherUsageStats = false
