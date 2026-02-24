@@ -1,0 +1,23 @@
+```
+credentials:
+  usernames:
+  
+    heitor:
+      role: admin
+      first_name: Heitor
+      last_name: Souza
+      logged_in: False
+      password: senha_hasheada 
+  
+    usuario_exemplo1:
+      role: viewer
+      first_name: usuario
+      last_name: exemplo
+      logged_in: False
+      password: senha_hasheada
+  
+cookie:
+  expiry_days: 1
+  key: cookie_chave
+  name: cookie_nome
+```
