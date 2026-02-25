@@ -2,13 +2,11 @@
 
 ## Descrição
 
-O Sistema Conciliador é um protótipo desenvolvido para realizar **conciliação bancária entre extratos bancários e arquivos de adquirentes** (operadoras de cartão).
+Esse é um protótipo de sistema conciliador desenvolvido para realizar **conciliação bancária entre extratos bancários e relatórios de adquirentes** (operadoras de cartão).
 
-A proposta do projeto foi criar um conciliador bancário simples, direto e funcional, capaz de comparar os lançamentos presentes no extrato bancário com os valores informados nos arquivos das adquirentes, identificando divergências como diferenças de valores, registros não encontrados, pagamentos pendentes ou inconsistências de data.
+A proposta do projeto foi criar um conciliador bancário simples, mas direto e funcional: o sistema recebe upload de extratos bancários e relatórios de pagamentos, cruza esses dados, e retorna uma conciliação bancária, identificando divergências, pendências e inconsistências de valores, pagamentos e transações.
 
-O objetivo foi desenvolver um **protótipo rápido, mas funcional**, validando na prática a lógica central de um sistema de conciliação bancária. A prioridade foi garantir que o fluxo principal de comparação funcionasse corretamente, mantendo o código organizado e preparado para evolução.
-
-Embora seja um protótipo, o sistema foi estruturado com preocupação arquitetural, separação de responsabilidades e modelagem consistente, permitindo que possa evoluir facilmente para uma versão mais robusta e pronta para produção.
+Unifica dados de diferentes fontes em um único fluxo de processamento, transformando em informações claras e permitindo interpretar corretamente cada caso. Além disso, oferece geração de um relatório objetivo e apresentável, o que facilita ainda mais a análise.
 
 ---
 
@@ -21,14 +19,13 @@ Embora seja um protótipo, o sistema foi estruturado com preocupação arquitetu
 
 ## Funcionalidades (Features)
 
-- Cadastro de registros
+- Upload de extratos e relatórios de pagamentos
 - Validação de dados de entrada
 - Processamento de regras de conciliação
-- Comparação automática entre bases de dados
+- Comparação automática entre arquivos
 - Identificação de divergências
-- Persistência estruturada em banco relacional
+- Persistência estruturada em arquivos
 - Tratamento de erros e exceções
-- Estrutura modular preparada para expansão
 
 ---
 
@@ -87,7 +84,7 @@ Este projeto demonstra capacidade de:
 
 ## Como rodar
 
-1. Adicionar users.yaml na pasta config.
+1. Editar e preencher users.yaml na pasta config.
    Estrutura:
 ```
 credentials:
@@ -113,7 +110,7 @@ cookie:
 ```
 
 
-2. Adicionar senha Hasheada
+2. Adicionar senha Hasheada ao arquivo 'users.yaml'
    ```
    from streamlit_authenticator.utilities.hasher import Hasher
 
@@ -125,3 +122,14 @@ cookie:
    ```
    streamlit run main.py
    ```
+
+
+## Demonstração do Sistema
+https://github.com/user-attachments/assets/09cd806d-4569-4c89-8e31-8d0666a3ed09
+
+https://github.com/user-attachments/assets/1d9342bf-a0f2-4748-bb5c-3fc58d2a3e3b
+
+
+
+
+   
