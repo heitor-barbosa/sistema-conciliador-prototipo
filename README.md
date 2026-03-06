@@ -84,7 +84,18 @@ Este projeto demonstra capacidade de:
 
 ## Como rodar
 
-1. Editar e preencher users.yaml na pasta config.
+1. Clonar ou baixar o repositório, e acessar o diretório do projeto
+
+2. Criar um ambiente virtual e instalar as dependências
+```
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+```
+
+3. Editar e preencher users.yaml na pasta config.
    Estrutura:
 ```
 credentials:
@@ -110,7 +121,7 @@ cookie:
 ```
 
 
-2. Adicionar senha Hasheada ao arquivo 'users.yaml'
+4. Adicionar senha Hasheada ao arquivo 'users.yaml'
    ```
    from streamlit_authenticator.utilities.hasher import Hasher
 
@@ -118,7 +129,7 @@ cookie:
    print(senha_hash)
    ```
 
-3. Rodar no terminal
+5. Rodar no terminal
    ```
    streamlit run main.py
    ```
